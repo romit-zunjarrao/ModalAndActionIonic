@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input  type="text" placeholder="First Name" [(ngModel)]="data"></ion-input>
+  </ion-item>
+  <ion-button shape="round" color="primary" fill="outline" (click)="openModal()" >Hello</ion-button>
+  <ion-button shape="round" color="primary" fill="outline" (click)="go()" >Go to Next Page <ion-icon name="arrow-forward"></ion-icon></ion-button>
+
+
+    <ion-card #card (swipe)="swipeEvent()">
+        <ion-img style="width: 100%; height: 400px;" src="https://i.ytimg.com/vi/r6gxQ6QYe9c/hqdefault.jpg"></ion-img>
+        <ion-card-header>
+            <ion-card-title> Pain<ion-badge color="primary">11</ion-badge></ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>The most popular industrial group ever, and largely
+                responsible for bringing the music to a mass audience.
+            </p>
+        </ion-card-content>
+    </ion-card>
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <button ion-fab><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></button>
+        <button ion-fab>  <ion-icon ios="logo-linkedin" md="logo-linkedin"></ion-icon></button>
+      </ion-fab-list>
+    
+    </ion-fab>
+
+</ion-content>
